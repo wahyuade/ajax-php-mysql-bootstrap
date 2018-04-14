@@ -7,7 +7,7 @@
     $kesan = $_POST["kesan"];
 
     $insert_db = mysqli_query($mysql, 'INSERT INTO pengunjung SET nama = "'.$nama.'", email = "'.$email.'", no_telp = "'.$no_telp.'", kesan = "'.$kesan.'"');
-
+    //-->>>Mengapa decision itu tidak menggunakan !
     header('Content-Type: application/json');
     if($insert_db){
         $response["success"] = true;
